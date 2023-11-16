@@ -22,11 +22,11 @@ class ExternasView(QtW.QGroupBox):
         self.hash = None
         self.metodo = ""
 
-        self.setStyleSheet("background-color:#DECCA6")
+        self.setStyleSheet("background-color:#E6EBE0")
 
         label = QtW.QLabel("Lista de datos:", self)
         label.move(550, 340)
-        label.setFont(QFont("Arial", 10, QFont.Bold))
+        label.setFont(QFont("Century Gothic", 10, QFont.Bold))
 
         self.tabla = QtW.QTableWidget(self)
         self.tabla.setColumnCount(2)
@@ -47,37 +47,37 @@ class ExternasView(QtW.QGroupBox):
 
         label = QtW.QLabel("Rango (Múltiplos de 10):", self)
         label.move(20, 20)
-        label.setFont(QFont("Arial", 10, QFont.Bold))
+        label.setFont(QFont("Century Gothic", 10, QFont.Bold))
         self.tamanoEstructura = QtW.QTextEdit(self)
         self.tamanoEstructura.setFrameStyle(1)
         self.tamanoEstructura.move(20, 50)
         self.tamanoEstructura.resize(140, 30)
-        self.tamanoEstructura.setFont(QFont("Arial", 10))
+        self.tamanoEstructura.setFont(QFont("Century Gothic", 10))
         self.tamanoEstructura.setStyleSheet("background-color:#EBE6D2")
 
         label = QtW.QLabel("Ingresar clave (Claves numéricas):", self)
         label.move(20, 200)
-        label.setFont(QFont("Arial", 10, QFont.Bold))
+        label.setFont(QFont("Century Gothic", 10, QFont.Bold))
         self.ingresoDato = QtW.QTextEdit(self)
         self.ingresoDato.setFrameStyle(1)
         self.ingresoDato.move(20, 230)
         self.ingresoDato.resize(140, 30)
-        self.ingresoDato.setFont(QFont("Arial", 10))
+        self.ingresoDato.setFont(QFont("Century Gothic", 10))
         self.ingresoDato.setStyleSheet("background-color:#EBE6D2")
 
         label = QtW.QLabel("Tipo de búsqueda:", self)
         label.move(20, 110)
-        label.setFont(QFont("Arial", 10, QFont.Bold))
+        label.setFont(QFont("Century Gothic", 10, QFont.Bold))
         self.opcionMetodoHash = QtW.QComboBox(self)
         self.opcionMetodoHash.addItems(["Secuencial", "Binaria", "Mod", "Cuadratico", "Plegamiento", "Truncamiento"])
         self.opcionMetodoHash.move(20, 140)
         self.opcionMetodoHash.resize(145, 30)
-        self.opcionMetodoHash.setFont(QFont("Arial", 10, QFont.Bold))
+        self.opcionMetodoHash.setFont(QFont("Century Gothic", 10, QFont.Bold))
         self.opcionMetodoHash.setStyleSheet("background-color:#EBE6D2")
 
         self.labelSuccess = QtW.QLabel("Proceso: ", self)
         self.labelSuccess.move(20, 390)
-        self.labelSuccess.setFont(QFont("Arial", 10, QFont.Bold))
+        self.labelSuccess.setFont(QFont("Century Gothic", 10, QFont.Bold))
         self.labelSuccess.resize(400, 30)
 
         self.registroProcess = QtW.QTextEdit(self)
@@ -85,17 +85,17 @@ class ExternasView(QtW.QGroupBox):
         self.registroProcess.move(20, 420)
         self.registroProcess.resize(500, 200)
         self.registroProcess.setReadOnly(True)
-        self.registroProcess.setFont(QFont("Arial", 10))
+        self.registroProcess.setFont(QFont("Century Gothic", 10))
         self.registroProcess.setStyleSheet("QTextEdit{border:1px solid black; background-color:#D0C0A7}")
 
         label = QtW.QLabel("Clave a buscar:", self)
         label.move(20, 290)
-        label.setFont(QFont("Arial", 10, QFont.Bold))
+        label.setFont(QFont("Century Gothic", 10, QFont.Bold))
         self.txbuscar = QtW.QTextEdit(self)
         self.txbuscar.setFrameStyle(1)
         self.txbuscar.move(20, 320)
         self.txbuscar.resize(140, 30)
-        self.txbuscar.setFont(QFont("Arial", 10))
+        self.txbuscar.setFont(QFont("Century Gothic", 10))
         self.txbuscar.setStyleSheet("background-color:#EBE6D2")
 
         self.bnEstructura = QtW.QPushButton("Crear estructura", self)
@@ -157,7 +157,7 @@ class ExternasView(QtW.QGroupBox):
                 self.imprimirTexto("Por Favor ingrese un tamaño mayor a 0 y menor a 10000, y múltiplo de 10")
                 return
         except:
-            self.imprimirTexto("Ingreso para tamaño caracteres no numericos")
+            self.imprimirTexto("Ingreso para tamaño caracteres no numéricos")
             return
 
         self.rango = t
@@ -215,7 +215,7 @@ class ExternasView(QtW.QGroupBox):
                     return
                 
         except:
-            self.imprimirTexto("Ingreso para registro caracteres no numericos")
+            self.imprimirTexto("Ingreso para registro caracteres no numéricos")
             return
         
 
@@ -240,7 +240,7 @@ class ExternasView(QtW.QGroupBox):
                 self.ingresoDato.setText("")
                 
         except:
-            self.imprimirTexto("La clave no puede tener caracteres no numericos")
+            self.imprimirTexto("La clave no puede tener caracteres no numéricos")
             return
 
     def cargarDatos(self):
@@ -281,7 +281,7 @@ class ExternasView(QtW.QGroupBox):
                 if(self.txbuscar.toPlainText() != ''):
                     r = int(self.txbuscar.toPlainText())
             except:
-                self.imprimirTexto("Ingreso para registro caracteres no numericos")
+                self.imprimirTexto("Ingreso para registro caracteres no numéricos")
                 return
             j = 0
             while j < self.rango - 1:
@@ -298,7 +298,7 @@ class ExternasView(QtW.QGroupBox):
             if(self.txbuscar.toPlainText() != ''):
                 r = int(self.txbuscar.toPlainText())
         except:
-            self.imprimirTexto("Ingreso para registro caracteres no numericos")
+            self.imprimirTexto("Ingreso para registro caracteres no numéricos")
             return
         
         multilista = self.cargarDatosSecuencialesBinarios()
@@ -315,7 +315,7 @@ class ExternasView(QtW.QGroupBox):
             if(self.txbuscar.toPlainText() != ''):
                 r = int(self.txbuscar.toPlainText())
         except:
-            self.imprimirTexto("Ingreso para registro caracteres no numericos")
+            self.imprimirTexto("Ingreso para registro caracteres no numéricos")
             return
         
         multilista = self.cargarDatosSecuencialesBinarios()

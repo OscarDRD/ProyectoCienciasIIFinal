@@ -22,14 +22,14 @@ class DinamicaView(QtW.QGroupBox):
         self.estructura = None
         self.listaDatos = []
 
-        self.setStyleSheet("background-color:#DECCA6")
+        self.setStyleSheet("background-color:#E6EBE0")
 
         label = QtW.QLabel("Lista de datos:", self)
         label.move(550, 240)
-        label.setFont(QFont("Arial", 10, QFont.Bold))
+        label.setFont(QFont("Century Gothic", 10, QFont.Bold))
         self.tabla = QtW.QTableWidget(self)
         self.tabla.setColumnCount(2)
-        self.tabla.setHorizontalHeaderLabels(["Lista espera", "Registro"])
+        self.tabla.setHorizontalHeaderLabels(["Lista de espera", "Registro"])
         self.tabla.setGeometry(550, 280, 500, 390)
         self.tabla.horizontalScrollBar().setVisible(False)
         self.tabla.setColumnWidth(0, 100)
@@ -46,67 +46,67 @@ class DinamicaView(QtW.QGroupBox):
 
         label = QtW.QLabel("Número de cubetas:", self)
         label.move(20, 240)
-        label.setFont(QFont("Arial", 10, QFont.Bold))
+        label.setFont(QFont("Century Gothic", 10, QFont.Bold))
         self.numcubeta = QtW.QTextEdit(self)
         self.numcubeta.setFrameStyle(1)
         self.numcubeta.move(20, 260)
         self.numcubeta.resize(140, 30)
-        self.numcubeta.setFont(QFont("Arial", 10))
+        self.numcubeta.setFont(QFont("Century Gothic", 10))
         self.numcubeta.setStyleSheet("background-color:#EBE6D2")
 
         label = QtW.QLabel("Número de registros:", self)
         label.move(180, 240)
-        label.setFont(QFont("Arial", 10, QFont.Bold))
+        label.setFont(QFont("Century Gothic", 10, QFont.Bold))
         self.numregistro = QtW.QTextEdit(self)
         self.numregistro.setFrameStyle(1)
         self.numregistro.move(180, 260)
         self.numregistro.resize(140, 30)
-        self.numregistro.setFont(QFont("Arial", 10))
+        self.numregistro.setFont(QFont("Century Gothic", 10))
         self.numregistro.setStyleSheet("background-color:#EBE6D2")
 
         label = QtW.QLabel("D.O. de expansión:", self)
         label.move(20, 300)
-        label.setFont(QFont("Arial", 10, QFont.Bold))
+        label.setFont(QFont("Century Gothic", 10, QFont.Bold))
         self.doexpansion = QtW.QTextEdit(self)
         self.doexpansion.setFrameStyle(1)
         self.doexpansion.move(20, 320)
         self.doexpansion.resize(140, 30)
-        self.doexpansion.setFont(QFont("Arial", 10))
+        self.doexpansion.setFont(QFont("Century Gothic", 10))
         self.doexpansion.setStyleSheet("background-color:#EBE6D2")
 
         label = QtW.QLabel("D.O. de reducción:", self)
         label.move(180, 300)
-        label.setFont(QFont("Arial", 10, QFont.Bold))
+        label.setFont(QFont("Century Gothic", 10, QFont.Bold))
         self.doreduccion = QtW.QTextEdit(self)
         self.doreduccion.setFrameStyle(1)
         self.doreduccion.move(180, 320)
         self.doreduccion.resize(140, 30)
-        self.doreduccion.setFont(QFont("Arial", 10))
+        self.doreduccion.setFont(QFont("Century Gothic", 10))
         self.doreduccion.setStyleSheet("background-color:#EBE6D2")
 
         label = QtW.QLabel("Método:", self)
         label.move(340, 240)
-        label.setFont(QFont("Arial", 10, QFont.Bold))
+        label.setFont(QFont("Century Gothic", 10, QFont.Bold))
         self.opcionMetodo = QtW.QComboBox(self)
         self.opcionMetodo.addItems(["Total", "Parcial"])
         self.opcionMetodo.move(340, 260)
         self.opcionMetodo.resize(145, 30)
-        self.opcionMetodo.setFont(QFont("Arial", 10, QFont.Bold))
+        self.opcionMetodo.setFont(QFont("Century Gothic", 10, QFont.Bold))
         self.opcionMetodo.setStyleSheet("background-color:#EBE6D2")
 
         label = QtW.QLabel("Ingresar clave:", self)
         label.move(20, 360)
-        label.setFont(QFont("Arial", 10, QFont.Bold))
+        label.setFont(QFont("Century Gothic", 10, QFont.Bold))
         self.ingresoDato = QtW.QTextEdit(self)
         self.ingresoDato.setFrameStyle(1)
         self.ingresoDato.move(20, 380)
         self.ingresoDato.resize(140, 30)
-        self.ingresoDato.setFont(QFont("Arial", 10))
+        self.ingresoDato.setFont(QFont("Century Gothic", 10))
         self.ingresoDato.setStyleSheet("background-color:#EBE6D2")
 
         self.labelSuccess = QtW.QLabel("Proceso: ", self)
         self.labelSuccess.move(20, 420)
-        self.labelSuccess.setFont(QFont("Arial", 10, QFont.Bold))
+        self.labelSuccess.setFont(QFont("Century Gothic", 10, QFont.Bold))
         self.labelSuccess.resize(400, 30)
 
         self.registroProcess = QtW.QTextEdit(self)
@@ -114,7 +114,7 @@ class DinamicaView(QtW.QGroupBox):
         self.registroProcess.move(20, 460)
         self.registroProcess.resize(500, 160)
         self.registroProcess.setReadOnly(True)
-        self.registroProcess.setFont(QFont("Arial", 10))
+        self.registroProcess.setFont(QFont("Century Gothic", 10))
         self.registroProcess.setStyleSheet("QTextEdit{border:1px solid black; background-color:#D0C0A7}")
 
         self.bnEstructura = QtW.QPushButton("Crear estructura", self)
@@ -162,7 +162,7 @@ class DinamicaView(QtW.QGroupBox):
                 exp = int(self.doexpansion.toPlainText())
                 red = int(self.doreduccion.toPlainText())
         except:
-            self.imprimirTexto("Ingreso para tamaño caracteres no numericos")
+            self.imprimirTexto("Ingreso para tamaño caracteres no numéricos")
             return
 
         self.cubetas = cub
@@ -201,7 +201,7 @@ class DinamicaView(QtW.QGroupBox):
                 self.imprimirTexto("La clave ya se encuentra en la estructura")
                 return
         except:
-            self.imprimirTexto("La clave no puede tener caracteres no numericos")
+            self.imprimirTexto("La clave no puede tener caracteres no numéricos")
             return
         
     def eliminarDato(self):
@@ -226,7 +226,7 @@ class DinamicaView(QtW.QGroupBox):
                 self.ingresoDato.setText("")
                 
         except:
-            self.imprimirTexto("La clave no puede tener caracteres no numericos")
+            self.imprimirTexto("La clave no puede tener caracteres no numéricos")
             return
         
     def crearTabla(self):
@@ -282,5 +282,5 @@ class DinamicaView(QtW.QGroupBox):
         error.setIcon(QtW.QMessageBox.Icon.Warning)
         error.setText(msg)
         error.setStyleSheet("background-color:white; border: 0pc solid white")
-        error.setFont(QFont("Arial", 10, QFont.Bold))
+        error.setFont(QFont("Century Gothic", 10, QFont.Bold))
         error.exec_()

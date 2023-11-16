@@ -14,7 +14,7 @@ class HashView(QtW.QGroupBox):
 
         self.hash = None
 
-        self.setStyleSheet("background-color:#DECCA6")
+        self.setStyleSheet("background-color:#E6EBE0")
 
         self.tabla = QtW.QTableWidget(self)
         self.tabla.setColumnCount(2)
@@ -29,64 +29,64 @@ class HashView(QtW.QGroupBox):
         # seccion de entradas
         label = QtW.QLabel("Metodo hash", self)
         label.move(10, 10)
-        label.setFont(QFont("Arial", 10, QFont.Bold))
+        label.setFont(QFont("Century Gothic", 10, QFont.Bold))
         self.opcionMetodoHash = QtW.QComboBox(self)
-        self.opcionMetodoHash.addItems(["Mod", "Cuadratico", "Plegamiento", "Truncamiento"])
+        self.opcionMetodoHash.addItems(["Mod", "Cuadrático", "Plegamiento", "Truncamiento"])
         self.opcionMetodoHash.move(10, 40)
         self.opcionMetodoHash.resize(150, 30)
-        self.opcionMetodoHash.setFont(QFont("Arial", 10, QFont.Bold))
+        self.opcionMetodoHash.setFont(QFont("Century Gothic", 10, QFont.Bold))
         self.opcionMetodoHash.setStyleSheet("background-color:#EBE6D2")
 
-        label = QtW.QLabel("Metodo Solucion de Colisiones", self)
+        label = QtW.QLabel("Método Solución de Colisiones", self)
         label.move(190, 10)
-        label.setFont(QFont("Arial", 10, QFont.Bold))
+        label.setFont(QFont("Century Gothic", 10, QFont.Bold))
         self.opcionSolColision = QtW.QComboBox(self)
-        self.opcionSolColision.addItems(["Lineal", "Cuadratico", "Doble Hash"])
+        self.opcionSolColision.addItems(["Lineal", "Cuadrático", "Doble Hash"])
         self.opcionSolColision.move(190, 40)
         self.opcionSolColision.resize(150, 30)
-        self.opcionSolColision.setFont(QFont("Arial", 10, QFont.Bold))
+        self.opcionSolColision.setFont(QFont("Century Gothic", 10, QFont.Bold))
         self.opcionSolColision.setStyleSheet("background-color:#EBE6D2")
 
         label = QtW.QLabel("Tamaño Estructura", self)
         label.move(400, 10)
-        label.setFont(QFont("Arial", 10, QFont.Bold))
+        label.setFont(QFont("Century Gothic", 10, QFont.Bold))
         self.tamanoEstructura = QtW.QTextEdit(self)
         self.tamanoEstructura.setFrameStyle(1)
         self.tamanoEstructura.move(400, 40)
         self.tamanoEstructura.resize(140, 30)
-        self.tamanoEstructura.setFont(QFont("Arial", 10))
+        self.tamanoEstructura.setFont(QFont("Century Gothic", 10))
         self.tamanoEstructura.setStyleSheet("background-color:#EBE6D2")
 
-        label = QtW.QLabel("Ingresar Registro (Solo se admiten registro numericos)", self)
+        label = QtW.QLabel("Ingresar Registro (Solo se admiten registro numéricos)", self)
         label.move(10, 100)
-        label.setFont(QFont("Arial", 10, QFont.Bold))
+        label.setFont(QFont("Century Gothic", 10, QFont.Bold))
         self.ingresoDato = QtW.QTextEdit(self)
         self.ingresoDato.setFrameStyle(1)
         self.ingresoDato.move(10, 140)
         self.ingresoDato.resize(200, 30)
-        self.ingresoDato.setFont(QFont("Arial", 10))
+        self.ingresoDato.setFont(QFont("Century Gothic", 10))
         self.ingresoDato.setStyleSheet("background-color:#EBE6D2")
 
         self.labelWarning = QtW.QLabel("Error: ", self)
         self.labelWarning.move(10, 300)
-        self.labelWarning.setFont(QFont("Arial", 14, QFont.Bold))
+        self.labelWarning.setFont(QFont("Century Gothic", 14, QFont.Bold))
         self.labelWarning.resize(750, 30)
         self.labelWarning.setStyleSheet("color:red")
 
         self.labelSuccess = QtW.QLabel("Success: ", self)
         self.labelSuccess.move(10, 330)
-        self.labelSuccess.setFont(QFont("Arial", 14, QFont.Bold))
+        self.labelSuccess.setFont(QFont("Century Gothic", 14, QFont.Bold))
         self.labelSuccess.resize(750, 30)
         self.labelSuccess.setStyleSheet("color:green")
 
         label = QtW.QLabel("Clave a buscar:", self)
         label.move(10, 200)
-        label.setFont(QFont("Arial", 10, QFont.Bold))
+        label.setFont(QFont("Century Gothic", 10, QFont.Bold))
         self.txbuscar = QtW.QTextEdit(self)
         self.txbuscar.setFrameStyle(1)
         self.txbuscar.move(10, 240)
         self.txbuscar.resize(140, 30)
-        self.txbuscar.setFont(QFont("Arial", 10))
+        self.txbuscar.setFont(QFont("Century Gothic", 10))
         self.txbuscar.setStyleSheet("background-color:#EBE6D2")
 
         self.bnBuscar = QtW.QPushButton("Buscar", self)
@@ -102,7 +102,7 @@ class HashView(QtW.QGroupBox):
         self.registroProcess.move(10, 370)
         self.registroProcess.resize(750, 300)
         self.registroProcess.setReadOnly(True)
-        self.registroProcess.setFont(QFont("Arial", 10))
+        self.registroProcess.setFont(QFont("Century Gothic", 10))
         self.registroProcess.setStyleSheet("QTextEdit{border:1px solid black; background-color:#D0C0A7}")
 
         self.bnEstructura = QtW.QPushButton("Crear Estructura", self)
@@ -110,7 +110,7 @@ class HashView(QtW.QGroupBox):
         self.bnEstructura.setStyleSheet("QPushButton{background-color:#b0c9bb; border:1px solid black;}"
                                         "QPushButton::hover{background-color :#8fa89a;}"
                                         "QPushButton::pressed{background-color:#6e8679; }")
-        self.bnEstructura.setFont(QFont("Arial", 10))
+        self.bnEstructura.setFont(QFont("Century Gothic", 10))
         self.bnEstructura.clicked.connect(self.testEstructure)
 
         self.bnIngresar = QtW.QPushButton("Agregar", self)
@@ -118,7 +118,7 @@ class HashView(QtW.QGroupBox):
         self.bnIngresar.setStyleSheet("QPushButton{background-color:#b0c9bb; border:1px solid black;}"
                                         "QPushButton::hover{background-color :#8fa89a;}"
                                         "QPushButton::pressed{background-color:#6e8679; }")
-        self.bnIngresar.setFont(QFont("Arial", 10))
+        self.bnIngresar.setFont(QFont("Century Gothic", 10))
         self.bnIngresar.clicked.connect(self.ingresarDato)
 
         self.bnReiniciar = QtW.QPushButton("Reiniciar", self)
@@ -126,7 +126,7 @@ class HashView(QtW.QGroupBox):
         self.bnReiniciar.setStyleSheet("QPushButton{background-color:#D7A184; border:1px solid black;}"
                                    "QPushButton::hover{background-color :#D4C2AD;}"
                                    "QPushButton::pressed{background-color:#EFDFCC; }")
-        self.bnReiniciar.setFont(QFont("Arial", 10))
+        self.bnReiniciar.setFont(QFont("Century Gothic", 10))
         self.bnReiniciar.clicked.connect(self.reiniciar)
         self.bnReiniciar.setEnabled(False)
 
@@ -139,7 +139,7 @@ class HashView(QtW.QGroupBox):
                 self.errWarning("Por Favor el tamaño debe ser mayor a 0")
                 return
         except:
-            self.errWarning("Ingresó para tamaño letras o caracteres, ingrese valores numericos")
+            self.errWarning("Ingresó para tamaño letras o caracteres, ingrese valores numéricos")
             return
 
         self.hash = TransfClaves(self.opcionMetodoHash.currentText(), t, self.opcionSolColision.currentText())
@@ -161,10 +161,10 @@ class HashView(QtW.QGroupBox):
             if(self.ingresoDato.toPlainText() != ''):
                 d = int(self.ingresoDato.toPlainText())
             if(d <= 0):
-                self.errWarning("Por Favor ingrese un Registro numerico mayor a 0")
+                self.errWarning("Por Favor ingrese un Registro numérico mayor a 0")
                 return
         except:
-            self.errWarning("Ingresó por Registro, caracteres o letras, ingrese registros numericos")
+            self.errWarning("Ingresó por Registro, caracteres o letras, ingrese registros numéricos")
             return
 
         self.hash.ingresarValor(d)
@@ -214,7 +214,7 @@ class HashView(QtW.QGroupBox):
             if(self.txbuscar.toPlainText() != ''):
                 r = int(self.txbuscar.toPlainText())
         except:
-            self.imprimirTexto("Ingreso para registro caracteres no numericos")
+            self.imprimirTexto("Ingreso para registro caracteres no numéricos")
             return
 
         self.registroProcess.setText(self.hash.buscarElemento(r))
